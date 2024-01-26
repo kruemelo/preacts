@@ -1,5 +1,5 @@
 {
-  "name": "preacts",
+  "name": "@kruemelo/preacts",
   "version": "1.0.0-alpha",
   "description": "preact standalone",
   "keywords": ["react", "preact", "standalone", "browser"],
