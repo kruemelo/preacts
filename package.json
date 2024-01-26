@@ -1,0 +1,21 @@
+{
+  "name": "preacts",
+  "version": "1.0.0-alpha",
+  "description": "preact standalone",
+  "keywords": ["react", "preact", "standalone", "browser"],
+  "main": "dist/preacts.js",
+  "type": "module",
+  "scripts": {
+    "build": "microbundle ./dist/preacts.js -o ./dist/preacts-browser.js -f modern --no-pkg-main --no-sourcemap --target web"
+  },
+  "author": "kruemelo",
+  "homepage": "https://github.com/kruemelo/preacts",
+  "repository": "kruemelo/preacts",
+  "license": "MIT",
+  "devDependencies": {
+    "@preact/signals": "^1.2.2",
+    "htm": "^3.1.1",
+    "microbundle": "^0.15.1",
+    "preact-custom-element": "^4.3.0"
+  }
+}
