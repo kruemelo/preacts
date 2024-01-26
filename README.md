@@ -1,0 +1,2 @@
+# preacts
+preact standalone
