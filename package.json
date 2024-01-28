@@ -1,6 +1,6 @@
 {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha-2",
+  "version": "1.0.0-alpha-3",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -8,7 +8,7 @@
     "standalone",
     "browser"
   ],
-  "exports": "./dist/preacts.js",
+  "exports": "./",
   "type": "module",
   "engines": {
     "node": ">=20"
