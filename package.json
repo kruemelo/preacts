@@ -1,6 +1,6 @@
 {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha4",
+  "version": "1.0.0-alpha6",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -8,14 +8,14 @@
     "standalone",
     "browser"
   ],
-  "exports": "./",
+  "exports": "./index.js",
   "type": "module",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
     "build": "npm run build:lib",
-    "build:lib": "microbundle ./src/preacts.ts -o ./dist/preacts.js -f modern --no-pkg-main --no-sourcemap --target web"
+    "build:lib": "microbundle ./src/preacts.ts -o ./dist/preacts.js -f modern --no-pkg-main --no-sourcemap --target web && mv ./dist/preacts.d.ts ./index.d.ts"
   },
   "author": "kruemelo",
   "homepage": "https://github.com/kruemelo/preacts",

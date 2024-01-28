@@ -2,7 +2,7 @@
   "include": ["src/"],
   "exclude": [],
 	"compilerOptions": {
-    "outDir": "dist",
+    "outDir": "./",
 		"target": "es2021",
     "module": "es2022",
     "moduleResolution": "node",
