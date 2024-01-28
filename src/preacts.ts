@@ -54,6 +54,9 @@ import {
 
 import register from 'preact-custom-element';
 
+// https://github.com/molefrog/wouter
+import * as wouter from "wouter-preact";
+
 export {
   htm,
   // preact/hooks
@@ -88,4 +91,6 @@ export {
   register,
   // css render
   css,
+  // wouter
+  wouter,
 };
