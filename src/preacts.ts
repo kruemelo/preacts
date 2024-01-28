@@ -50,7 +50,7 @@ import {
 
 import {
   css,
-} from "./css.js";
+} from "./css";
 
 import register from 'preact-custom-element';
 

@@ -2,7 +2,7 @@ import { useCallback, useContext, useDebugValue, useEffect, useErrorBoundary, us
 import htm from "htm";
 import { Signal, batch, computed, effect, signal, untracked, useComputed, useSignal, useSignalEffect } from "@preact/signals";
 import { Component, h, html, render } from "htm/preact";
-import { css } from "./css.js";
+import { css } from "./css";
 import register from 'preact-custom-element';
 import * as wouter from "wouter-preact";
 export { htm, useCallback, useContext, useDebugValue, useEffect, useErrorBoundary, useId, useImperativeHandle, useLayoutEffect, useMemo, useReducer, useRef, useState, Signal, batch, computed, effect, signal, untracked, useComputed, useSignal, useSignalEffect, Component, h, html, render, register, css, wouter, };

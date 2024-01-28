@@ -1,6 +1,6 @@
-{
+ {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha11",
+  "version": "1.0.0-alpha12",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -8,14 +8,19 @@
     "standalone",
     "browser"
   ],
-  "exports": "./dist",
+  "exports":  {
+    "types": "./dist/preacts.d.ts"
+  },
+  "types": "./dist/preacts.d.ts",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=16"
   },
   "scripts": {
-    "build": "npm run build:lib",
-    "build:lib": "microbundle ./src/preacts.ts -o ./dist/preacts.js -f modern --no-pkg-main --no-sourcemap --target web"
+    "build": "npm run build:lib && npm run build:cp-lib",
+    "build:lib": "microbundle ./src/preacts.ts -o ./index.js -f modern --no-pkg-main --no-sourcemap --target web",
+    "build:cp-lib": "cp ./index.js ./dist/preacts.js",
+    "xbuild:types": "tsc "
   },
   "author": "kruemelo",
   "homepage": "https://github.com/kruemelo/preacts",
@@ -24,11 +29,7 @@
     "url": "git+https://github.com/kruemelo/preacts.git"
   },
   "license": "MIT",
-  "peerDependenciesMeta": {
-    "@preact/signals": {"optional": false},
-    "htm":  {"optional": false},
-    "preact-custom-element":  {"optional": false},
-    "wouter-preact":  {"optional": false}
+  "dependencies": {
   },
   "devDependencies": {
     "@preact/signals": "^1.2.2",

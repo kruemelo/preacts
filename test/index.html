@@ -4,7 +4,7 @@
     <script type="importmap">
       {
         "imports": {
-          "preacts": "../preacts.js"
+          "preacts": "../dist/preacts.js"
         }
       }
     </script>    
@@ -22,13 +22,8 @@
       register,
       css,
     } from "preacts";
+    import { Greeting } from "./Greeting.js";
   
-    const Greeting = ({ name = 'World' }) => {
-      return html`<p>Hello, ${name}!</p>`;
-    };
-
-    register(Greeting, 'x-greeting', ['name'], { shadow: false });
-
     const count = signal(0);
 
     function App() {

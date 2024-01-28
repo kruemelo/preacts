@@ -1,8 +1,8 @@
-export function css(strings: any, ...values: any[]): string;
-export namespace css {
+export declare const css: {
+    (strings: any, ...values: any[]): string;
     /**
      * Apply the css to the document
      * @param {string} rules css style rules
      */
-    function render(rules: string): void;
-}
+    render(rules: any): void;
+};
