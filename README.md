@@ -34,7 +34,6 @@ npm run build
 # prerequisites
 npm install http-server -g
 npm i
-# startup the server
-http-server
-# open http://localhost:8080/test/ in browser
+# startup the server open test in browser
+http-server -o /test
 ```
