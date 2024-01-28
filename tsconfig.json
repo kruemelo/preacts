@@ -1,6 +1,6 @@
 {
-  "include": ["src/preacts.ts"],
-  "exclude": ["src/css.ts"],
+  "include": ["src/"],
+  // "exclude": ["src/css.ts"],
 	"compilerOptions": {
     // "outDir": "./",
 		"target": "es2021",
