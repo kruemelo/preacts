@@ -1,6 +1,6 @@
 {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha7",
+  "version": "1.0.0-alpha8",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -19,7 +19,10 @@
   },
   "author": "kruemelo",
   "homepage": "https://github.com/kruemelo/preacts",
-  "repository": "kruemelo/preacts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kruemelo/preacts.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@preact/signals": "^1.2.2",
