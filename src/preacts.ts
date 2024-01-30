@@ -55,7 +55,15 @@ import {
 import register from 'preact-custom-element';
 
 // https://github.com/molefrog/wouter
-import * as wouter from "wouter-preact";
+import * as _wouter from "wouter-preact";
+import * as _wouterUseLocation from "wouter-preact/use-location"; 
+import makeMatcher from "wouter-preact/matcher";
+
+const wouter = {
+  makeMatcher,
+  ..._wouterUseLocation,
+  ..._wouter,
+};
 
 export {
   htm,
