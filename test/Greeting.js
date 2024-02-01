@@ -1,10 +1,15 @@
-import {
-  html,
-  register,
-} from "preacts";
+import { html, css } from "preacts";
 
 export const Greeting = ({ name = 'World' }) => {
-  return html`<p>Hello, ${name}!</p>`;
+  return html`<h1 class="Greeting">Hello, ${name}!</h1>`;
 };
 
-register(Greeting, 'x-greeting', ['name'], { shadow: false });
+// css
+const backgroundColor = "lightgreen";
+const style = css`
+  .Greeting {
+    background-color: ${backgroundColor};
+  }
+`;
+
+css.render(style);

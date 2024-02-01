@@ -9,9 +9,6 @@
       }
     </script>    
   </head>
-
-  <div id="app"></div>
-
   <script type="module">
     import {
       html,
@@ -19,8 +16,6 @@
       signal,
       useRef,
       useEffect,
-      register,
-      css,
     } from "preacts";
     import { Greeting } from "./Greeting.js";
   
@@ -30,32 +25,20 @@
       const myRef = useRef(null);
 
       useEffect(() => {
-        if (myRef.current) {
-          console.log("useEffect", myRef.current);
-        }
+        console.log("useEffect", myRef.current);
       }, []);
 
       return html`
         <div ref=${myRef}>
-          <h1>Hello World!</h1>
+          <${Greeting} name="again" />
           <button onClick=${() => (count.value += 1)}>
             Increment with signal
           </button>
           <p>Counter: ${count}</p>
-          <x-greeting name="again!" />
         </div>
       `;
     }
-    render(html`<${App} />`, document.getElementById("app"));
 
-    // css
-    const backgroundColor = "lightgreen";
-    const style = css`
-      h1 {
-        background-color: ${backgroundColor};
-      }
-    `;
-
-    css.render(style);
+    render(html`<${App} />`, document.body);
   </script>
 </html>
