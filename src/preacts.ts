@@ -1,3 +1,5 @@
+import * as preact from "preact";
+
 import {
   useCallback,
   useContext,
@@ -11,7 +13,7 @@ import {
   useReducer,
   useRef,
   useState,
-} from "preact/hooks"
+} from "preact/hooks";
 
 import htm from "htm";
 
@@ -48,9 +50,8 @@ import {
   // useState,
 } from "htm/preact";
 
-import {
-  css,
-} from "./css";
+import * as CSS from "./css";
+const css = CSS.css;
 
 import register from 'preact-custom-element';
 
@@ -66,6 +67,7 @@ const wouter = {
 };
 
 export {
+  preact,
   htm,
   // preact/hooks
   useCallback,
@@ -97,8 +99,9 @@ export {
   render,
   // preact-custom-element
   register,
-  // css render
+  // css render, classNames
   css,
+  CSS,
   // wouter
   wouter,
 };

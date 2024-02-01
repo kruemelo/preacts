@@ -1,7 +1,7 @@
 import { html, css } from "preacts";
 
-export const Greeting = ({ name = 'World' }) => {
-  return html`<h1 class="Greeting">Hello, ${name}!</h1>`;
+export const Greeting = ({ name = 'world', count }) => {
+  return html`<h1 class="Greeting">Hello, ${count === 0 ? name : "again"}!</h1>`;
 };
 
 // css

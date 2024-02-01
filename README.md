@@ -56,27 +56,15 @@ Replace `<your/web/path/here/>` with your desired target location.
     </script>    
   </head>
   <script type="module">
-    import {
-      html,
-      render,
-      signal,
-      useRef,
-      useEffect,
-    } from "preacts";
+    import { html, render, signal } from "preacts";
     import { Greeting } from "./Greeting.js";
   
     const count = signal(0);
 
     function App() {
-      const myRef = useRef(null);
-
-      useEffect(() => {
-        console.log("useEffect", myRef.current);
-      }, []);
-
       return html`
-        <div ref=${myRef}>
-          <${Greeting} name="again" />
+        <div>
+          <${Greeting} count=${count.value} />
           <button onClick=${() => (count.value += 1)}>
             Increment with signal
           </button>
@@ -97,8 +85,8 @@ You need to adjust `importmap`: Replace `<your/web/path/here/>` with the path th
 ```js
 import { html, css } from "preacts";
 
-export const Greeting = ({ name = 'World' }) => {
-  return html`<h1 class="Greeting">Hello, ${name}!</h1>`;
+export const Greeting = ({ name = 'world', count }) => {
+  return html`<h1 class="Greeting">Hello, ${count === 0 ? name : "again"}!</h1>`;
 };
 
 // css
