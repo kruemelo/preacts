@@ -5,4 +5,9 @@ export declare const css: {
      * @param {string} rules css style rules
      */
     render(rules: string): void;
+    classNames: (someClassNames: ClassNames) => string | undefined;
 };
+export type ClassNamesRecord = Record<string, boolean>;
+export type ClassNamesArray = Array<string | ClassNamesRecord>;
+export type ClassNames = string | ClassNamesArray | ClassNamesRecord;
+export declare const classNames: (someClassNames: ClassNames) => string | undefined;

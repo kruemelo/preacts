@@ -12,3 +12,43 @@ css.render = (rules:string) => {
   constructedStyleSheet.replace(rules);
   document.adoptedStyleSheets.push(constructedStyleSheet);
 };
+
+export type ClassNamesRecord = Record<string, boolean> 
+export type ClassNamesArray = Array<string | ClassNamesRecord>
+export type ClassNames = string | ClassNamesArray | ClassNamesRecord
+
+export const classNames = (someClassNames: ClassNames): string | undefined => {
+  if (!someClassNames) {
+    return;
+  }
+
+  if (typeof someClassNames === "string") {
+    const splitted = someClassNames.replace(/\s+/g, " ").trim().split(" ");
+    if (splitted.length === 1) {
+      return splitted[0];
+    }
+    return classNames(splitted);
+  }
+
+  if (Array.isArray(someClassNames)) {
+    return someClassNames.map(classNames)
+      .filter(Boolean)
+      .join(" ");
+  }
+
+  if (typeof someClassNames === "object") {
+    return Object.entries(someClassNames).map(([className, enabled]) => {
+      if (enabled) {
+        return classNames(className);
+      }
+    })
+    .filter(Boolean)
+    .join(" ");
+  }
+
+  console.warn("unknown class names argument structure", someClassNames);
+
+  return String(someClassNames);
+}
+
+css.classNames = classNames;

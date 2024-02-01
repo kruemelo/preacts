@@ -1,6 +1,6 @@
  {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha15",
+  "version": "1.0.0-alpha16",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -17,7 +17,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:cp-lib",
+    "build": "rm -f package-lock.json && npm update && npm run build:lib && npm run build:cp-lib",
     "build:lib": "microbundle ./src/preacts.ts -o ./index.js -f modern --no-pkg-main --no-sourcemap --target web",
     "build:cp-lib": "cp ./index.js ./dist/preacts.js",
     "xbuild:types": "tsc "
