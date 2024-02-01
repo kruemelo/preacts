@@ -33,7 +33,7 @@ Run [preact](https://github.com/preactjs/preact) standalone in the browser.
 npm:
 
 ```bash
-npm i --save-dev @kruemelo/preacts:latest
+npm i --save-dev @kruemelo/preacts
 cp node-modules/@kruemelo/preacts/dist/preacts.js <your/web/path/here/>preacts.js
 ```
 
