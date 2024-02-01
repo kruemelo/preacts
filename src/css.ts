@@ -17,7 +17,7 @@ export type ClassNamesRecord = Record<string, boolean>
 export type ClassNamesArray = Array<string | ClassNamesRecord>
 export type ClassNames = string | ClassNamesArray | ClassNamesRecord
 
-export const classNames = (someClassNames: ClassNames): string | undefined => {
+css.classNames = (someClassNames: ClassNames): string | undefined => {
   if (!someClassNames) {
     return;
   }
@@ -27,11 +27,11 @@ export const classNames = (someClassNames: ClassNames): string | undefined => {
     if (splitted.length === 1) {
       return splitted[0];
     }
-    return classNames(splitted);
+    return css.classNames(splitted);
   }
 
   if (Array.isArray(someClassNames)) {
-    return someClassNames.map(classNames)
+    return someClassNames.map(css.classNames)
       .filter(Boolean)
       .join(" ");
   }
@@ -39,7 +39,7 @@ export const classNames = (someClassNames: ClassNames): string | undefined => {
   if (typeof someClassNames === "object") {
     return Object.entries(someClassNames).map(([className, enabled]) => {
       if (enabled) {
-        return classNames(className);
+        return css.classNames(className);
       }
     })
     .filter(Boolean)
@@ -49,6 +49,4 @@ export const classNames = (someClassNames: ClassNames): string | undefined => {
   console.warn("unknown class names argument structure", someClassNames);
 
   return String(someClassNames);
-}
-
-css.classNames = classNames;
+};
