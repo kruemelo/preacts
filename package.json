@@ -1,6 +1,6 @@
  {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha18",
+  "version": "1.0.0-alpha19",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -36,6 +36,6 @@
     "htm": "^3.1.1",
     "microbundle": "^0.15.1",
     "preact-custom-element": "^4.3.0",
-    "wouter-preact": "^2.12.2"
+    "wouter-preact": "^3.0.0"
   }
 }

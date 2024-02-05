@@ -17,7 +17,7 @@ Run [preact](https://github.com/preactjs/preact) standalone in the browser.
 - [HTM (Hyperscript Tagged Markup) and html/preact](https://github.com/developit/htm)
 - [preact-custom-element](https://github.com/preactjs/preact-custom-element)
 - [preact-signals](https://github.com/preactjs/signals)
-- [wouter](https://www.npmjs.com/package/wouter), including
+- [wouter](https://www.npmjs.com/package/wouter-preact), including
   - `wouter-preact/use-location`
   - `wouter-preact/matcher`
 
