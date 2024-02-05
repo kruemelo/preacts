@@ -17,9 +17,9 @@
     "node": ">=16"
   },
   "scripts": {
-    "build": "rm -f package-lock.json && npm update && npm run build:lib && npm run build:cp-lib",
-    "build:lib": "microbundle ./src/preacts.ts -o ./preacts.js -f modern --no-pkg-main --target web",
-    "build:cp-lib": "cp ./preacts.js ./dist/preacts.js && cp ./preacts.js.map ./dist/preacts.js.map",
+    "build": "rm -f package-lock.json && npm update && npm run build:lib",
+    "build:lib": "microbundle ./src/preacts.ts -o ./dist/preacts.js -f modern --no-pkg-main --target web",
+    "xbuild:cp-lib": "cp ./preacts.js ./dist/preacts.js && cp ./preacts.js.map ./dist/preacts.js.map",
     "xbuild:types": "tsc "
   },
   "author": "kruemelo",
