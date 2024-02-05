@@ -1,8 +1,8 @@
-export * from "preact";
-export { CreateHandle, Dispatch, EffectCallback, Inputs, MutableRef, Reducer, Ref, StateUpdater, useCallback, useContext, useDebugValue, useEffect, useErrorBoundary, useId, useImperativeHandle, useLayoutEffect, useMemo, useReducer, useRef, useState, } from "preact/hooks";
+export { AnyComponent, Attributes, ClassAttributes, Component, ComponentChild, ComponentChildren, ComponentClass, ComponentConstructor, ComponentFactory, ComponentProps, ComponentType, Consumer, ContainerNode, Context, ContextType, ErrorInfo, Fragment, FunctionComponent, FunctionalComponent, JSX, Key, Options, PreactConsumer, PreactContext, PreactDOMAttributes, PreactProvider, Provider, Ref, RefCallback, RefObject, RenderableProps, VNode, cloneElement, createContext, createElement, createRef, h, hydrate, isValidElement, options, render, toChildArray } from "preact";
+export { CreateHandle, Dispatch, EffectCallback, Inputs, MutableRef, Reducer, StateUpdater, useCallback, useContext, useDebugValue, useEffect, useErrorBoundary, useId, useImperativeHandle, useLayoutEffect, useMemo, useReducer, useRef, useState, } from "preact/hooks";
 export * as htm from "htm";
-export * from "@preact/signals";
-export { Component, h, html, render, } from "htm/preact";
+export { ReadonlySignal, Signal, batch, computed, effect, signal, untracked, useComputed, useSignal, useSignalEffect, } from "@preact/signals";
+export { html, } from "htm/preact";
 import * as CSS from "./css";
 declare const css: {
     (strings: TemplateStringsArray, ...values: any): string;

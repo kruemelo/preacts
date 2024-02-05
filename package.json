@@ -1,6 +1,6 @@
  {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha20",
+  "version": "1.0.0-alpha21",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -18,8 +18,8 @@
   },
   "scripts": {
     "build": "rm -f package-lock.json && npm update && npm run build:lib && npm run build:cp-lib",
-    "build:lib": "microbundle ./src/preacts.ts -o ./index.js -f modern --no-pkg-main --target web",
-    "build:cp-lib": "cp ./index.js ./dist/preacts.js && cp ./index.js.map ./dist/index.js.map",
+    "build:lib": "microbundle ./src/preacts.ts -o ./preacts.js -f modern --no-pkg-main --target web",
+    "build:cp-lib": "cp ./preacts.js ./dist/preacts.js && cp ./preacts.js.map ./dist/preacts.js.map",
     "xbuild:types": "tsc "
   },
   "author": "kruemelo",

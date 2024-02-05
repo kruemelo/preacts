@@ -1,4 +1,48 @@
-export * from "preact";
+export {
+  AnyComponent,
+  Attributes,
+  ClassAttributes,
+  Component,
+  ComponentChild,
+  ComponentChildren,
+  ComponentClass,
+  ComponentConstructor,
+  ComponentFactory,
+  ComponentProps,
+  ComponentType,
+  Consumer,
+  ContainerNode,
+  Context,
+  ContextType,
+  ErrorInfo,
+  Fragment,
+  FunctionComponent,
+  FunctionalComponent,
+  JSX,
+  Key,
+  Options,
+  PreactConsumer,
+  PreactContext,
+  PreactDOMAttributes,
+  PreactProvider,
+  Provider,
+  Ref,
+  RefCallback,
+  RefObject,
+  RenderableProps,
+  VNode,
+  cloneElement,
+  createContext,
+  createElement,
+  createRef,
+  h,
+  hydrate,
+  isValidElement,
+  options,
+  render,
+  toChildArray
+} from "preact";
+
 export { 
   CreateHandle,
   Dispatch,
@@ -6,7 +50,7 @@ export {
   Inputs,
   MutableRef,
   Reducer,
-  Ref,
+  // Ref,
   StateUpdater,
   useCallback,
   useContext,
@@ -24,13 +68,24 @@ export {
 
 export * as htm from "htm";
 
-export * from "@preact/signals";
+export {
+  ReadonlySignal,
+  Signal,
+  batch,
+  computed,
+  effect,
+  signal,
+  untracked,
+  useComputed,
+  useSignal,
+  useSignalEffect,
+} from "@preact/signals";
 
 export {
-  Component,
-  h,
+  // Component,
+  // h,
   html,
-  render,
+  // render,
 } from "htm/preact";
 
 import * as CSS from "./css";
