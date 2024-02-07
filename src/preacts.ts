@@ -112,4 +112,8 @@ export const wouter = {
   ..._wouter,
 };
 
-export * as wexel from "./wexel";
+import * as _wexel from "./wexel";
+
+export const wexel = {
+  ..._wexel,
+};

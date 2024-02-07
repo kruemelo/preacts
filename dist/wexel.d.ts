@@ -1,5 +1,5 @@
 export type StateObject = Record<string | number | symbol, any> | null;
-export type SetState = (partial: StateObject | Function, replace?: boolean) => boolean;
+export type SetState = (nextState: StateObject, replace?: boolean) => boolean;
 export type GetState = () => StateObject;
 export type GetInitialState = () => StateObject;
 export type Listener = (state: StateObject, previousState: StateObject) => void;
@@ -21,5 +21,5 @@ export interface StateApi {
  * @returns {StateApi}
  */
 export declare const createState: (createState: CreateState) => StateApi;
-export declare function useGlobal(objectToUse: StateObject, onChangeCallback: (changedObject: StateObject) => void): [StateObject, (objectToSet: StateObject) => boolean];
+export declare function useGlobal(objectToUse: StateObject, onChangeCallback?: (changedObject: StateObject) => void): [StateObject, (objectToSet: StateObject) => boolean];
 export declare function getObjectStore(stateObject: StateObject): StateApi;

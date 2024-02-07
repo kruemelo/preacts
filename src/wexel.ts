@@ -1,8 +1,9 @@
+// @ts-check
 import { useState, useEffect } from "preact/hooks";
 
 export type StateObject = Record<string | number | symbol, any> | null;
 
-export type SetState = (partial: StateObject | Function, replace?: boolean) => boolean;
+export type SetState = (nextState: StateObject, replace?: boolean) => boolean;
 
 export type GetState = () => StateObject;
 
@@ -40,11 +41,7 @@ export const createState = (createState: CreateState): StateApi => {
 
   const listeners: Set<Listener> = new Set();
 
-  const setState: SetState = (partial, replace = false) => {
-    const nextState: StateObject = typeof partial === "function" 
-      ? partial(state) 
-      : partial;
-    
+  const setState: SetState = (nextState, replace = false) => {
     if (!Object.is(nextState, state)) {
       const previousState = state;
 
@@ -110,7 +107,7 @@ export const createState = (createState: CreateState): StateApi => {
 
 export function useGlobal(
   objectToUse: StateObject, 
-  onChangeCallback: (changedObject: StateObject) => void
+  onChangeCallback?: (changedObject: StateObject) => void
 ): [StateObject, (objectToSet: StateObject) => boolean] {
   const store = getObjectStore(objectToUse);
   const current = store.use();
