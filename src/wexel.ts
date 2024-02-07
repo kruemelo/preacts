@@ -98,7 +98,7 @@ export const createState = (createState: CreateState): StateApi => {
    */
   const commit = (partial: StateObject = state) => {
     Object.assign(initialState, partial);
-
+    state = initialState;
     setState(partial)
   }
 
