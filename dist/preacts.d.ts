@@ -49,3 +49,4 @@ export declare const wouter: {
         record: true;
     }): _wouterMemoryLocation.HookReturnValue & _wouterMemoryLocation.StubHistory;
 };
+export * as wexel from "./wexel";
