@@ -51,7 +51,7 @@ export declare const wouter: {
 };
 import * as _wexel from "./wexel";
 export declare const wexel: {
-    useGlobal(objectToUse: Record<string | number | symbol, any>, onChangeCallback: (changedObject: Record<string | number | symbol, any>) => void): [Record<string | number | symbol, any>, (objectToSet: Record<string | number | symbol, any>) => boolean];
+    useGlobal(objectToUse: Record<string | number | symbol, any>, onChangeCallback?: (changedObject: Record<string | number | symbol, any>) => void): [Record<string | number | symbol, any>, (objectToSet: Record<string | number | symbol, any>) => boolean];
     getObjectStore(stateObject: Record<string | number | symbol, any>): _wexel.StateApi;
     createState: (createState: _wexel.CreateState) => _wexel.StateApi;
 };

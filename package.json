@@ -1,6 +1,6 @@
  {
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha25",
+  "version": "1.0.0-alpha26",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -17,7 +17,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "build": "rm -rf dist/* && rm -f package-lock.json && npm update && npm run build:lib",
+    "build": "rm -rf dist/* && rm -rf ./node-modules/.cache && rm -f package-lock.json && npm update && npm run build:lib",
     "build:lib": "microbundle ./src/preacts.ts -o ./dist/preacts.js -f modern --no-pkg-main --target web"
   },
   "author": "kruemelo",
