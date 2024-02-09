@@ -91,12 +91,12 @@ export const createState = (createState: CreateState): StateApi => {
   }
 
   /**
-   * commit the partial to the initialState
+   * commit the partial to the current state
    */
   const commit = (partial: StateObject = state) => {
-    Object.assign(initialState, partial);
-    state = initialState;
-    setState(partial)
+    const previousState = structuredClone(state);
+    Object.assign(state, partial);
+    listeners.forEach((listener) => listener(state, previousState));
   }
 
   const api: StateApi = { setState, getState, getInitialState, subscribe, use, commit };
