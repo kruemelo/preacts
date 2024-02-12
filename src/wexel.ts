@@ -114,6 +114,7 @@ export function useGlobal(
 
   const set = (objectToSet: StateObject) => {
     if (store.setState(objectToSet)) {
+      Object.assign(objectToUse, objectToSet);
       onChangeCallback?.(objectToSet)
     
       return true;
