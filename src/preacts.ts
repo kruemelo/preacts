@@ -111,9 +111,3 @@ export const wouter = {
   ..._wouterHashLocation,
   ..._wouter,
 };
-
-import * as _wexel from "./wexel";
-
-export const wexel = {
-  ..._wexel,
-};

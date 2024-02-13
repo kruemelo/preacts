@@ -4,6 +4,7 @@ Run [preact](https://github.com/preactjs/preact) standalone in the browser.
 
 - no transpiler necessary
 - no build chain
+- just import one tiny ~12kB file
 
 **Supports**
 
@@ -84,7 +85,11 @@ You need to adjust `importmap`: Replace `<your/web/path/here/>` with the path th
 import { html, css } from "preacts";
 
 export const Greeting = ({ name = 'world', count }) => {
-  return html`<h1 class="Greeting">Hello, ${count === 0 ? name : "again"}!</h1>`;
+  return html`
+    <h1 class="Greeting">
+      Hello, ${count === 0 ? name : "again"}!
+    </h1>
+  `;
 };
 
 // css
