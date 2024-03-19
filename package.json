@@ -1,6 +1,6 @@
- {
+{
   "name": "@kruemelo/preacts",
-  "version": "1.0.0-alpha30",
+  "version": "1.0.0-rc1",
   "description": "preact standalone",
   "keywords": [
     "react",
@@ -8,7 +8,7 @@
     "standalone",
     "browser"
   ],
-  "exports":  {
+  "exports": {
     "types": "./dist/preacts.d.ts"
   },
   "types": "./dist/preacts.d.ts",
@@ -27,13 +27,11 @@
     "url": "git+https://github.com/kruemelo/preacts.git"
   },
   "license": "MIT",
-  "dependencies": {
-  },
   "devDependencies": {
     "@preact/signals": "^1.2.2",
     "htm": "^3.1.1",
     "microbundle": "^0.15.1",
     "preact-custom-element": "^4.3.0",
-    "wouter-preact": "^3.0.0"
+    "wouter-preact": "^3.1.1"
   }
 }
