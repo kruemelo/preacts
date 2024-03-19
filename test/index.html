@@ -10,8 +10,7 @@
     </script>    
   </head>
   <script type="module">
-    // import * as preacts from "preacts";
-    import { html, render, signal } from "preacts";
+    import { html, render, signal, renderToString } from "preacts";
     import { Greeting } from "./Greeting.js";
   
     const count = signal(0);
@@ -24,6 +23,9 @@
             Increment with signal
           </button>
           <p>Counter: ${count}</p>
+          <p>Greeting rendered to string: 
+          <pre>${renderToString(html`<${Greeting} count=${count.value} />`)}</pre>
+          </p>
         </div>
       `;
     }

@@ -105,6 +105,9 @@ import * as _wouterMemoryLocation from "wouter-preact/memory-location";
 import * as _wouterBrowserLocation from "wouter-preact/use-browser-location";
 import * as _wouterHashLocation from "wouter-preact/use-hash-location";
 
+// https://github.com/preactjs/preact-render-to-string
+export { renderToString, renderToStringAsync } from 'preact-render-to-string';
+
 export const wouter = {
   ..._wouterMemoryLocation,
   ..._wouterBrowserLocation,

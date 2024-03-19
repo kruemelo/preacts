@@ -27,11 +27,12 @@
     "url": "git+https://github.com/kruemelo/preacts.git"
   },
   "license": "MIT",
-  "devDependencies": {
+  "peerDependencies": {
     "@preact/signals": "^1.2.2",
     "htm": "^3.1.1",
     "microbundle": "^0.15.1",
     "preact-custom-element": "^4.3.0",
+    "preact-render-to-string": "^6.4.0",
     "wouter-preact": "^3.1.1"
   }
 }

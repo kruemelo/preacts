@@ -19,6 +19,7 @@ Run [preact](https://github.com/preactjs/preact) standalone in the browser.
 - [preact-custom-element](https://github.com/preactjs/preact-custom-element)
 - [preact-signals](https://github.com/preactjs/signals)
 - [wouter](https://www.npmjs.com/package/wouter-preact)
+- [renderToString, renderToStringAsync](https://github.com/preactjs/preact-render-to-string)
 
 **Readings**
 
@@ -55,7 +56,7 @@ Replace `<your/web/path/here/>` with your desired target location.
     </script>    
   </head>
   <script type="module">
-    import { html, render, signal } from "preacts";
+    import { html, render, signal, renderToString } from "preacts";
     import { Greeting } from "./Greeting.js";
   
     const count = signal(0);
@@ -68,6 +69,9 @@ Replace `<your/web/path/here/>` with your desired target location.
             Increment with signal
           </button>
           <p>Counter: ${count}</p>
+          <p>Greeting rendered to string: 
+          <pre>${renderToString(html`<${Greeting} count=${count.value} />`)}</pre>
+          </p>
         </div>
       `;
     }
